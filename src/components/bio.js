@@ -54,7 +54,8 @@ const Bio = () => {
     // </div>
     <div className="bio">
       <p>
-      {author?.summary || null}
+      {/* {author?.summary || null}
+      {` `} */}
       <a href={`https://www.linkedin.com/in/${social?.linkedin || ``}`}>
            Connect with me on LinkedIn
       </a>     
