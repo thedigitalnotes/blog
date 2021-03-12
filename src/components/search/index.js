@@ -18,7 +18,7 @@ export default function Search({ indices }) {
   const [query, setQuery] = useState()
   const [hasFocus, setFocus] = useState(false)
   const searchClient = algoliasearch(
-    process.env.ALGOLIA_APP_ID,
+    process.env.GATSBY_ALGOLIA_APP_ID,
     process.env.GATSBY_ALGOLIA_SEARCH_KEY
   )
 
