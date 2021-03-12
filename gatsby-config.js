@@ -3,12 +3,13 @@ module.exports = {
     title: `The Digital Notes`,
     author: {
       name: ``,
-      summary: ``,
+      summary: `Microsoft 365, SharePoint, Power Platform`,
     },
-    description: `Microsoft 365, SharePoint, Power Platform`,
+    description: ``,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `https://www.linkedin.com/in/bangerasuraj`,
+      twitter: `bangerasuraj`,
+      linkedin:`bangerasuraj`
     },
   },
   plugins: [

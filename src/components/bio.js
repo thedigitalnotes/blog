@@ -53,9 +53,12 @@ const Bio = () => {
     //   )}
     // </div>
     <div className="bio">
-      <a href={`https://twitter.com/${social?.twitter || ``}`}>
+      <p>
+      author?.summary
+      <a href={`https://www.linkedin.com/in/${social?.linkedin || ``}`}>
            Connect with me on LinkedIn
-      </a>
+      </a>     
+      </p>
     </div>
   )
 }
