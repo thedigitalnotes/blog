@@ -1,6 +1,11 @@
+import Loadable from '@loadable/component'
 import * as React from "react"
 import { Link } from "gatsby"
-import Search from "./search"
+
+const Search = Loadable(() => 
+  import("./search")
+)
+
 const searchIndices = [{ name: `Pages`, title: `Pages` }]
 
 
