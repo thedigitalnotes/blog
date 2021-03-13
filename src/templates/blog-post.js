@@ -5,8 +5,10 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import kebabCase from "lodash/kebabCase"
+
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
+  const post = data.markdownRemark  
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
@@ -23,7 +25,17 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <p>{post.frontmatter.date}</p>          
+          Tags: {post.frontmatter.tags.map((tag, i) => [
+             <Link to={`/tags/${kebabCase(tag)}/`}>
+  <strong key={i}>
+    {tag}
+    {i < post.frontmatter.tags.length - 1 ? ', ' : ''}
+  </strong>
+  </Link> 
+])}
+ <br/>
+ <br/> 
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -85,6 +97,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
