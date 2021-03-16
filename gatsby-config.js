@@ -4,6 +4,16 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `The Digital Notes`,
+    menuLinks:[
+         {
+           name:'home',
+          link:'/'
+        },
+     {
+       name:'page2',
+    link:'/page-2'
+      }
+    ],
     author: {
       name: ``,
       summary: `Microsoft 365, SharePoint, Power Platform`,
@@ -141,5 +151,16 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "UA-192325050-1", // Google Analytics / GA
+          "AW-CONVERSION_ID", // Google Ads / Adwords / AW
+          "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
+        ],
+      },
+    },
   ],
 }
