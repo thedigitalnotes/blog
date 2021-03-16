@@ -31,6 +31,7 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
+    <div></div>
     // <div className="bio">
     //   <p>
     //     <a href='/tags'>View all posts</a>
